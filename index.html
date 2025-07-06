@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agrinho 2025 – Festejando a Conexão Campo & Cidade</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero" id="inicio">
+    <nav class="navbar container">
+      <div class="nav-brand"><h2>Agrinho 2025</h2></div>
+      <ul class="nav-menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#conexao">Conexão</a></li>
+        <li><a href="#agricultura">Agricultura Urbana</a></li>
+        <li><a href="#importancia">Importância</a></li>
+      </ul>
+      <div class="mobile-nav-toggle">☰</div>
+    </nav>
+    <div class="hero-content container">
+      <div>
+        <h1 class="hero-title">Festejando a Conexão Campo & Cidade</h1>
+        <p class="hero-subtitle">Descubra como a vida rural e urbana se complementam para um futuro mais sustentável</p>
+        <button class="cta-button" onclick="scrollToSection('conexao')">Veja Mais</button>
+      </div>
+      <div class="hero-image">
+        <img src="images/hero.jpg" alt="Campo e cidade interligados"/>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="conexao" class="section conexao-section container">
+      <h2 class="section-title">A Ponte Entre Dois Mundos</h2>
+      <div class="content-grid">
+        <div class="text-content">
+          <p>Campo e cidade constituem uma relação de interdependência: o campo provê alimentos e recursos, enquanto a cidade compartilha tecnologia, serviços e oportunidades educacionais.</p>
+          <p>Essa troca mútua estimula um ciclo sustentável, fortalecendo a economia, preservando tradições e incentivando inovações que beneficiam a todos.</p>
+          <div class="stats">
+            <div class="stat-item"><h3>70%</h3><p>dos alimentos consumidos nas cidades vêm do campo.</p></div>
+            <div class="stat-item"><h3>85%</h3><p>da população brasileira vive em áreas urbanas.</p></div>
+          </div>
+        </div>
+        <div class="image-content"><img src="images/rural-urban.jpg" alt="Relação rural e urbana" class="content-image"/></div>
+      </div>
+    </section>
+
+    <section id="agricultura" class="section agricultura-section container">
+      <h2 class="section-title">Agricultura Urbana: O Futuro Verde</h2>
+      <div class="content-grid reverse">
+        <div class="image-content"><img src="images/urban-agriculture.jpg" alt="Agricultura urbana" class="content-image"/></div>
+        <div class="text-content">
+          <p>Hortas urbanas, jardins verticais e cultivo comunitário são exemplos de como a cidade pode produzir seus próprios alimentos, aproximando ainda mais campo e área urbana.</p>
+          <div class="benefits-list">
+            <h3>Benefícios da Agricultura Urbana:</h3>
+            <ul>
+              <li>🌱 Redução da pegada de carbono</li>
+              <li>🏙️ Melhoria da qualidade do ar</li>
+              <li>🥬 Alimentos frescos e saudáveis</li>
+              <li>👥 Fortalecimento da comunidade</li>
+              <li>💧 Uso inteligente da água</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="importancia" class="section importancia-section container">
+      <h2 class="section-title">Por Que Isso Importa?</h2>
+      <div class="cards-grid">
+        <div class="card"><div class="card-icon">🌾</div><h3>Segurança Alimentar</h3><p>Garante abastecimento constante de alimentos frescos e nutritivos.</p></div>
+        <div class="card"><div class="card-icon">🔄</div><h3>Economia Circular</h3><p>Reutiliza recursos, reduz desperdício e valoriza produtores locais.</p></div>
+        <div class="card"><div class="card-icon">🌍</div><h3>Sustentabilidade</h3><p>Equilibra desenvolvimento com preservação do meio ambiente.</p></div>
+        <div class="card"><div class="card-icon">🤝</div><h3>Cooperação Social</h3><p>Fortalece laços entre comunidades urbanas e rurais.</p></div>
+      </div>
+    </section>
+
+    <section class="section call-to-action container">
+      <h2>Participe Você Também</h2>
+      <p>Você pode fazer a diferença: consuma produtos locais, apoie hortas urbanas e valorize a origem do que você come.</p>
+      <div class="action-buttons">
+        <button class="action-btn primary" onclick="window.open('https://www.sistemafaep.org.br/agrinho/','_blank')">Saiba Mais</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <div class="footer-content">
+      <div><h3>Agrinho 2025</h3><p>Projetado por <strong>Pedro Barbosa Lopes</strong></p></div>
+      <div><h4>Contato</h4><p>Email: agrinho2025@escola.com</p></div>
+      <div><h4>Redes Sociais</h4><div class="social-links"><a href="#">Facebook</a><a href="#">Instagram</a></div></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025 - Projeto Agrinho 2025</p></div>
+  </footer>
+
+  <script>
+    function scrollToSection(id){
+      document.getElementById(id).scrollIntoView({behavior:'smooth'});
+    }
+    document.querySelectorAll('.section').forEach(sec=>{
+      new IntersectionObserver(entries=>{
+        entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('animate-in'); });
+      },{threshold:0.2}).observe(sec);
+    });
+  </script>
+</body>
+</html>
